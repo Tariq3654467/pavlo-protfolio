@@ -46,11 +46,18 @@ const Info: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Info / CV</title>
+        <title>Info / CV | Pavlo Troph Portfolio</title>
         <meta
           name="description"
-          content="Info & CV — tools, skills, and experience of Pavlo Troph . Available for collaborations and studio roles."
+          content="Info & CV — tools, skills, and experience of Pavlo Troph. Available for collaborations and studio roles."
         />
+        <meta property="og:title" content="Info / CV | Pavlo Troph Portfolio" />
+        <meta property="og:description" content="Info & CV — tools, skills, and experience of Pavlo Troph. Available for collaborations and studio roles." />
+        <meta property="og:url" content="https://pavlo-protfolio.vercel.app/info" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Info / CV | Pavlo Troph Portfolio" />
+        <meta name="twitter:description" content="Info & CV — tools, skills, and experience of Pavlo Troph. Available for collaborations and studio roles." />
       </Helmet>
       
       <CollectionContainer>
@@ -83,7 +90,7 @@ const Info: React.FC = () => {
               label: "Description",
               segments: [
                 {
-                  tag: "h1",
+                  tag: "h2",
                   link: "https://www.instagram.com/pavlotroph/",
                   text: "Pavlo Troph"
                 },
@@ -97,7 +104,7 @@ const Info: React.FC = () => {
               label: "Companies",
               segments: [
                 {
-                  tag: "h1",
+                  tag: "h2",
                   link: "https://www.instagram.com/pavlotroph/",
                   text: "FiveMods"
                 },
@@ -105,7 +112,7 @@ const Info: React.FC = () => {
                  "text": "\n",
                 },
                 {
-                  tag: "h1",
+                  tag: "h2",
                   link: "https://www.instagram.com/pavlotroph/",
                   text: "Network Graphics"
                 },
@@ -113,7 +120,7 @@ const Info: React.FC = () => {
                  "text": "\n",
                 },  
                 {
-                  tag: "h1",
+                  tag: "h2",
                   link: "https://www.instagram.com/pavlotroph/",
                   text: "Meta Network"
                 }
@@ -123,21 +130,21 @@ const Info: React.FC = () => {
               label: "Software Skills",
               segments: [
                 {
-                  tag: "h1",
+                  tag: "h2",
                   text: "Adobe Suite"
                 },
                 {
                  "text": "\n",
                 },
                 {
-                  tag: "h1",
+                  tag: "h2",
                   text: "Blender"
                 },
                 {
                  "text": "\n",
                 },  
                 {
-                  tag: "h1",
+                  tag: "h2",
                   text: "Figma"
                 }
               ]

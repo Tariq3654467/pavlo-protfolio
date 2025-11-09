@@ -226,7 +226,7 @@ export const COLLECTION_TEXT_TITLE_WRAPPER = styled.div<{ align?: Align }>`
   margin: 0 auto;
 `;
 
-export const COLLECTION_TEXT_TITLE = styled.h1<{
+export const COLLECTION_TEXT_TITLE = styled.h2<{
   fontSize?: string;
   align?: Align;
 }>`
@@ -244,7 +244,7 @@ export const COLLECTION_TEXT_TITLE = styled.h1<{
   color: #fff;
 `;
 
-export const COLLECTION_4SEC_DESCRIPTION = styled.h1`
+export const COLLECTION_4SEC_DESCRIPTION = styled.h2`
   padding-bottom: 8px;
 `;
 
@@ -499,7 +499,7 @@ export const TextBlock = styled.div`
   padding: 1rem;
   text-align: center;
   aspect-ratio: 1;
-  h1 {
+  h2 {
     font-size: 32px;
   }
 
@@ -510,7 +510,7 @@ export const TextBlock = styled.div`
     margin: 0 auto;
     padding: 80px;
 
-    h1 {
+    h2 {
       font-size: 32px;
     }
   }

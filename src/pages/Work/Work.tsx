@@ -78,11 +78,18 @@ const Work: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Work / Projects</title>
+        <title>Work / Projects | Pavlo Troph Portfolio</title>
         <meta
           name="description"
-          content="Selected projects by Pavlo Troph : branding, UI, motion, 3D, and marketing visuals for FiveMods, Network Graphics, and more."
+          content="Selected projects by Pavlo Troph: branding, UI, motion, 3D, and marketing visuals for FiveMods, Network Graphics, and more."
         />
+        <meta property="og:title" content="Work / Projects | Pavlo Troph Portfolio" />
+        <meta property="og:description" content="Selected projects by Pavlo Troph: branding, UI, motion, 3D, and marketing visuals for FiveMods, Network Graphics, and more." />
+        <meta property="og:url" content="https://pavlo-protfolio.vercel.app/work" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Work / Projects | Pavlo Troph Portfolio" />
+        <meta name="twitter:description" content="Selected projects by Pavlo Troph: branding, UI, motion, 3D, and marketing visuals." />
       </Helmet>
       
       <WorkContainer>

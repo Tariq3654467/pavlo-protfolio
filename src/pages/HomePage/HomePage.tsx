@@ -47,14 +47,21 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Pavlo Troph - Portfolio</title>
+        <title>Pavlo Troph - Portfolio | Home</title>
         <meta
           name="description"
           content="Pavlo Troph is a multidisciplinary artist: Graphic Design, CGI, Photography, Cinematography, Art Direction."
         />
+        <meta property="og:title" content="Pavlo Troph - Portfolio" />
+        <meta property="og:description" content="Pavlo Troph is a multidisciplinary artist: Graphic Design, CGI, Photography, Cinematography, Art Direction." />
+        <meta property="og:url" content="https://pavlo-protfolio.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pavlo Troph - Portfolio" />
+        <meta name="twitter:description" content="Multidisciplinary artist based in Toronto specializing in CGI, Graphic Design & Cinematography." />
       </Helmet>
       <HomeContainer>
-        <h1 style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', border: 0 }}>
+        <h1 style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clipPath: 'inset(50%)', whiteSpace: 'nowrap', border: 0 }}>
           Pavlo Troph Portfolio
         </h1>
         <HOME_BUTTON to="/work" label="WORK" />

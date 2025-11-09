@@ -18,11 +18,18 @@ const Contact: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Contact</title>
+        <title>Contact | Pavlo Troph Portfolio</title>
         <meta
           name="description"
           content="Contact Pavlo Troph — inquiries, collaborations, and freelance/studio opportunities."
         />
+        <meta property="og:title" content="Contact | Pavlo Troph Portfolio" />
+        <meta property="og:description" content="Contact Pavlo Troph — inquiries, collaborations, and freelance/studio opportunities." />
+        <meta property="og:url" content="https://pavlo-protfolio.vercel.app/contact" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Contact | Pavlo Troph Portfolio" />
+        <meta name="twitter:description" content="Contact Pavlo Troph — inquiries, collaborations, and freelance/studio opportunities." />
       </Helmet>
       
       <AdditionalWrapper>

@@ -60,11 +60,18 @@ const AboutUs: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>About</title>
+        <title>About | Pavlo Troph Portfolio</title>
         <meta
           name="description"
           content="About Pavlo Troph — Toronto-based designer creating graphic design, 3D, video, and photography for games and brands."
         />
+        <meta property="og:title" content="About | Pavlo Troph Portfolio" />
+        <meta property="og:description" content="About Pavlo Troph — Toronto-based designer creating graphic design, 3D, video, and photography for games and brands." />
+        <meta property="og:url" content="https://pavlo-protfolio.vercel.app/about" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="About | Pavlo Troph Portfolio" />
+        <meta name="twitter:description" content="About Pavlo Troph — Toronto-based designer creating graphic design, 3D, video, and photography for games and brands." />
       </Helmet>
       
       <AdditionalWrapper>

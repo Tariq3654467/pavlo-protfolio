@@ -526,14 +526,14 @@ const renderImageGridBlock = (b: CollectionBlockDB) => {
           <TextBlock>
             {/* это однострочная надпись сбоку от изображения */}
             {item.label && (
-              <h1>
+              <h2>
                 {item.label.split('\n').map((line, i) => (
                   <React.Fragment key={i}>
                     {line}
                     <br />
                   </React.Fragment>
                 ))}
-              </h1>
+              </h2>
             )}
 
           </TextBlock>
@@ -566,7 +566,7 @@ const renderImageGridBlock = (b: CollectionBlockDB) => {
             {b.content.sections.map((s: Section, i: number) => (
               <CollectionWrapper key={i}>
                 <COLLECTION_4SEC_TITLE>{s.label}</COLLECTION_4SEC_TITLE>
-                <COLLECTION_4SEC_DESCRIPTION as={s.tag || 'h1'}>
+                <COLLECTION_4SEC_DESCRIPTION as={s.tag || 'h2'}>
                   {s.text.split('\n').map((line, index) => (
                     <React.Fragment key={index}>
                       {line}
@@ -590,7 +590,7 @@ const renderImageGridBlock = (b: CollectionBlockDB) => {
             {b.content.sections.map((s: Section, i: number) => (
               <CollectionWrapper key={i}>
                 <COLLECTION_4SEC_TITLE>{s.label}</COLLECTION_4SEC_TITLE>
-                <COLLECTION_4SEC_DESCRIPTION as={s.tag || 'h1'}>
+                <COLLECTION_4SEC_DESCRIPTION as={s.tag || 'h2'}>
                   {s.text.split('\n').map((line, index) => (
                     <React.Fragment key={index}>
                       {line}
@@ -833,6 +833,7 @@ const renderImageGridBlock = (b: CollectionBlockDB) => {
                 src={currentMedia.url}
                 controls
                 autoPlay
+                aria-label={currentMedia.title || 'Video player'}
                 style={{ maxWidth: '100%', maxHeight: '70vh', objectFit: 'contain' }}
               />
             )}

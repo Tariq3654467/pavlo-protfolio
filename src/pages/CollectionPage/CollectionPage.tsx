@@ -91,7 +91,7 @@ const CollectionPage: React.FC<CollectionPageProps> = ({ source }) => {
         justifyContent: 'center',
         background: '#000',
       }}>
-        <video src={Loading} autoPlay loop muted playsInline style={{ width: 150, height: 150 }} />
+        <video src={Loading} autoPlay loop muted playsInline aria-label="Loading animation" style={{ width: 150, height: 150 }} />
       </div>
     );
   }
@@ -130,20 +130,29 @@ const CollectionPage: React.FC<CollectionPageProps> = ({ source }) => {
   return (
     <>
       <Helmet>
-        <title>{project.title} — MySite</title>
+        <title>{project.title} | Pavlo Troph Portfolio</title>
         <meta name="description" content={metaDescription} />
-        <meta property="og:title" content={project.title} />
+        <meta property="og:title" content={`${project.title} | Pavlo Troph Portfolio`} />
         <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={`https://pavlo-protfolio.vercel.app/${source}/${project.id}`} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${project.title} | Pavlo Troph Portfolio`} />
+        <meta name="twitter:description" content={metaDescription} />
       </Helmet>
-
-      <CollectionComponent
-        collection={{
-          id: project.id,
-          folder: project.folder,
-          blocks: project.blocks,
-        }}
-        source={source}
-      />
+      <div>
+        <h1 style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clipPath: 'inset(50%)', whiteSpace: 'nowrap', border: 0 }}>
+          {project.title}
+        </h1>
+        <CollectionComponent
+          collection={{
+            id: project.id,
+            folder: project.folder,
+            blocks: project.blocks,
+          }}
+          source={source}
+        />
+      </div>
 
       <CollectionSlider
         source={source} 

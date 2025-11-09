@@ -122,7 +122,7 @@ export const MODAL_DESCRIPTION = styled.p`
   }
 `;
 
-export const MODAL_TITLE = styled.h1`
+export const MODAL_TITLE = styled.h2`
   font-family: var(--font-family);
   font-size: 18px;
   color: #fff;

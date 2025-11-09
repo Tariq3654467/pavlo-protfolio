@@ -69,11 +69,18 @@ const Photo: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Photography</title>
+        <title>Photography | Pavlo Troph Portfolio</title>
         <meta
           name="description"
           content="Photography portfolio by Pavlo Troph — automotive, cinematic frames, and environment studies."
         />
+        <meta property="og:title" content="Photography | Pavlo Troph Portfolio" />
+        <meta property="og:description" content="Photography portfolio by Pavlo Troph — automotive, cinematic frames, and environment studies." />
+        <meta property="og:url" content="https://pavlo-protfolio.vercel.app/photography" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Photography | Pavlo Troph Portfolio" />
+        <meta name="twitter:description" content="Photography portfolio by Pavlo Troph — automotive, cinematic frames, and environment studies." />
       </Helmet>
       
       <WorkContainer>
