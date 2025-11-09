@@ -71,6 +71,18 @@ const Footer: React.FC = () => {
             )}
           </CollectionWrapper>
         ))}
+        <CollectionWrapper>
+          <COLLECTION_4SEC_TITLE>Site Navigation</COLLECTION_4SEC_TITLE>
+          <COLLECTION_4SEC_DESCRIPTION as="h3">
+            <a 
+              href="/sitemap.html" 
+              style={{ textDecoration: 'none', color: 'inherit' }}
+              aria-label="View sitemap"
+            >
+              Sitemap
+            </a>
+          </COLLECTION_4SEC_DESCRIPTION>
+        </CollectionWrapper>
       </CollectionHeader>
       </CollectionAdditionalWrapper>
     </FooterContainer>
