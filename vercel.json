@@ -2,7 +2,7 @@
   "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
-  "installCommand": "npm install --legacy-peer-deps",
+  "installCommand": "npm install --legacy-peer-deps --no-audit",
   "framework": "vite",
   "rewrites": [
     {
