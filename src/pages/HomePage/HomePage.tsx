@@ -1,0 +1,70 @@
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
+import {
+  HOME_BUTTON_MAIN,
+  HOME_BUTTON_RESIZABLE_BAR,
+  HOME_BUTTON_TEXT,
+  HomeContainer,
+} from './HomePage.styled';
+
+const Home: React.FC = () => {
+  type HomeButtonProps = {
+    to: string;
+    label: string;
+  };
+
+  const HOME_BUTTON: React.FC<HomeButtonProps> = ({ to, label }) => {
+    const [isClicked, setIsClicked] = useState(false);
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+      if (isClicked) return;
+      setIsClicked(true);
+      setTimeout(() => navigate(to), 200);
+    };
+
+    return (
+      <HOME_BUTTON_MAIN 
+        onClick={handleClick} 
+        $isClicked={isClicked}
+        role="button"
+        tabIndex={0}
+        aria-label={`Navigate to ${label}`}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleClick();
+          }
+        }}
+      >
+        <HOME_BUTTON_RESIZABLE_BAR $isClicked={isClicked} />
+        <HOME_BUTTON_TEXT $isClicked={isClicked}>{label}</HOME_BUTTON_TEXT>
+      </HOME_BUTTON_MAIN>
+    );
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>Pavlo Troph - Portfolio</title>
+        <meta
+          name="description"
+          content="Pavlo Troph is a multidisciplinary artist: Graphic Design, CGI, Photography, Cinematography, Art Direction."
+        />
+      </Helmet>
+      <HomeContainer>
+        <h1 style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', border: 0 }}>
+          Pavlo Troph Portfolio
+        </h1>
+        <HOME_BUTTON to="/work" label="WORK" />
+        <HOME_BUTTON to="/photography" label="PHOTOGRAPHY" />
+        <HOME_BUTTON to="/info" label="INFO" />
+        <HOME_BUTTON to="/contact" label="CONTACTS" />
+        <HOME_BUTTON to="/about" label="ABOUT ME" />
+      </HomeContainer>
+    </>
+  );
+};
+
+export default Home;
